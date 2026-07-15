@@ -1,4 +1,4 @@
-# User-content
+# Socials App
 User &amp; content APIs developed as home assignment for Angelswing.
 
 
