@@ -49,7 +49,7 @@ Add `active_model_serializers` gem to the Gemfile. This is targeted for developm
 > docker compose run --rm app bundle install
 
 Generate the serializer
-> docker compose run --rm app bundle install
+> docker compose exec app rails g serializer user
 
 # Active Record Seed
 > Prefer `railse db:prepare` over `rails db:migrate` or something similar. `db:prepare` is kind of a composit action. Still needed to run `db:seed`!
