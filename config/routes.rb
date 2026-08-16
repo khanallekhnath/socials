@@ -16,5 +16,8 @@ Rails.application.routes.draw do
       resources :users, only: [ :create ]
       resources :contents
     end
+    namespace :v2 do
+      resources :contents
+    end
   end
 end

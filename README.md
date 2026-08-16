@@ -2,12 +2,20 @@
 User &amp; content APIs developed as home assignment for Angelswing.
 
 
-# Install ruby
+# Pre-requisites
+## Install Ruby
 ```
 $ ruby -v
 $ ruby 3.4.10 (2026-06-30 revision 2b0b7728dc) +PRISM [arm64-darwin25]
 rails-8.1.3
 ```
+## Install Docker
+Install docker engine in your machine.
+> https://docs.docker.com/engine/install/
+
+## Install Gems
+Once the `Gemfile` is updated with required gems with appropirate versions install gems in the container
+> docker compose run --rm app bundle install
 
 ## Create new application
 Since, we don't need any client dependent features, api application is sufficient for the time being. Rails used sqlite3 by default.
@@ -54,7 +62,19 @@ Generate the serializer
 # Active Record Seed
 > Prefer `railse db:prepare` over `rails db:migrate` or something similar. `db:prepare` is kind of a composit action. Still needed to run `db:seed`!
 
+# Run API Services
+For development; run in demon mode
+> docker compose up --build -d
+
+# Testing APIs
+* Set env variables first: `SCHEMA(http), SERVER(localhost:3000/api), VERSION(v1 | v2)`
+* Obtain Postman collection here
+`https://lekhnathkhanal-np-4148303.postman.co/workspace/Lekh-Nath-Khanal's-Workspace~d67731c7-67b4-41f9-871e-273fcceaac83/collection/56627155-cf12bc3b-9e75-46fb-8127-674edfba3c3c?action=share&source=copy-link&creator=56627155`
+
+# Stop API Services
+> docker compose down
+
+
 # Remaining tasks
-- API versioning
 - Tests
 - Deployment
