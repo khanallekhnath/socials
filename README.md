@@ -29,8 +29,8 @@ Copy `.env.sample` to `.env` and update the credentials.
 
 # Active Records
 ## User
-> rails g model User email:string:uniq 
-name:string country:string password_digest:string active:boolean                          
+> rails g model User email:string:uniq
+name:string country:string password_digest:string active:boolean
 ```
 invoke  active_record
 create    db/migrate/20260716100203_create_users.rb
